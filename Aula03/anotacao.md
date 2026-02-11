@@ -104,3 +104,23 @@ se vamos utilizar o estilo inline, interno ou externo:
     faz com que o estilo seja aplicado a todos os elementos <p> na página, neste exemplo o texto dos parágrafos ficará azul e com tamanho de fonte 18 pixels.
 
    
+
+
+
+* externo
+    criamos um arquivo CSS separado (por exemplo, styles.css) e vinculamos esse arquivo
+    ao documento HTML usando a tag <link> dentro do elemento <head>. Por exemplo:
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head> 
+    No arquivo styles.css, podemos definir os estilos da seguinte maneira:
+    p {
+        color: green;
+        font-size: 20px;
+    }
+
+    faz com que o estilo seja aplicado a todos os elementos <p> na página, neste exemplo o texto dos parágrafos ficará verde e com tamanho de fonte 20 pixels.
+
+
+
+
