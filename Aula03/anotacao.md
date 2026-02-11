@@ -62,6 +62,20 @@ portem nao é suportado em todas as propriedades, e nem por todos os navegadores
 
 - O CSS pode ser aplicado de três maneiras diferentes: inline, interno e externo.
 
+
+utilizamos o seguinte criterio para escolher 
+se vamos utilizar o estilo inline, interno ou externo:
+ - inline 
+    * precisamos definir somente um elemento específico
+
+- interno
+    * queremos aplicar estilos a SOMENTE UMA PAGINA,
+
+- externo 
+    * queremos aplicar estilos a TODAS AS PAGINAS DO SITE
+
+
+
 * inline
     utilizamos o atributo style diretamente no elemento HTML para aplicar estilos específicos a esse elemento. Por exemplo:
     <p style="color: red; font-size: 16px;">Este é um parágrafo com estilo inline.</p>
@@ -73,4 +87,20 @@ portem nao é suportado em todas as propriedades, e nem por todos os navegadores
     ex. 
     color: red;
     font-size: 16px;
-    
+
+
+
+* interno
+    utilizamos a tag <style> dentro do elemento <head> do documento HTML para definir estilos que serão aplicados a toda a página. Por exemplo:
+    <head>
+        <style>
+            p {
+                color: blue;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+
+    faz com que o estilo seja aplicado a todos os elementos <p> na página, neste exemplo o texto dos parágrafos ficará azul e com tamanho de fonte 18 pixels.
+
+   
