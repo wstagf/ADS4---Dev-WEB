@@ -124,3 +124,41 @@ se vamos utilizar o estilo inline, interno ou externo:
 
 
 
+
+# seletores
+
+ - os seletores são utilizados para selecionar os elementos HTML aos quais queremos aplicar estilos. Existem diferentes tipos de seletores, como seletores de tipo, classe, ID, atributo, entre outros.
+
+    Seletor de elemento
+        p, h1, div, etc.
+        ex. 
+        p {
+            color: red;
+        }
+        <p>Este é um parágrafo</p>
+        Neste exemplo, todos os elementos <p> terão o texto vermelho.
+
+
+    Seletor de classe
+        .classe
+        ex. 
+        .destaque {
+            color: blue;
+        }
+        Neste exemplo, todos os elementos com a classe "destaque" terão o texto azul.
+        <p class="destaque">Este é um parágrafo em destaque</p>
+        
+
+    Seletor de ID
+        #id
+        ex. 
+        #titulo {
+            color: green;
+        }
+        Neste exemplo, o elemento com o ID "titulo" terá o texto verde.
+        <div id="titulo">Este é um título</div> 
+
+
+    
+
+
