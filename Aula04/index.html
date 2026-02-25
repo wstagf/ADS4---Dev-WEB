@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        LABEL {
+            background: red;
+        } 
+        button {
+            color: yellow;
+        }
+
+        #nomeDoColaborador {
+            background: rgb(247, 247, 247);
+        }
+
+        .estiloDEClasse {
+            background: rgb(255, 0, 0);
+        }
+        
+        .nome {
+            background: black;
+            color: white;
+            border: 1px solid #030803;
+            font-size: 25px;
+            margin:  10px;
+        }
+
+        .btn {
+            background:  rgb(171, 171, 171);
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+            padding: 25px;
+            margin: 15px;
+            border: 2px solid #e30606;
+            box-shadow: 2px 1px 2px rgba(231, 2, 2, 0.3);
+        }  
+
+
+        .btn:hover {
+            border: 2px solid #3700ff;
+        }
+
+        .btnEnviar {
+            color: rgb(16, 255, 3);
+
+        }
+
+        .btnIndicacao {
+            color: blue;
+
+        }
+
+        .btnLimpar {
+            color: #ffe600;
+        }
+
+
+
+        table {
+            margin-bottom: 1000px;
+        }
+
+        .titulo {
+            background: rgb(255, 0, 0);
+        }
+
+        tr {
+            background: rgb(255, 247, 1);
+        }
+
+        /* pares 
+        tr:nth-child(odd) { 
+            background: rgb(1, 255, 14);
+        }
+
+        impar
+        tr:nth-child(even) {
+            background: rgb(0, 64, 255);
+        } */
+
+        
+/* 
+        de 5 em 5 elemntos, a partir do segundo elemento */
+
+         tr:nth-child(5n+2) {
+            background: rgb(0, 64, 255);
+        } *
+
+
+
+        /*         
+        tr:nth-child(2n) {
+            background: #e5ff00;
+        } */
+
+
+
+        .BotaoAnexo {
+            background: rgb(0, 255, 85);
+        }
+
+        .BotaoAnexo:hover {
+            background: rgb(255, 0, 230);
+        }
+
+
+    </style>
+</head>
+<BODY>
+    <table border="1">
+        <tr class="titulo">
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Currículo</th>
+        </tr>
+        <tr>
+            <td>João Silva</td>
+            <td>(11) 98765-4321</td>
+            <td><a href="curriculo_joao.pdf">curriculo_joao.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Maria Santos</td>
+            <td>(21) 91234-5678</td>
+            <td><a href="curriculo_maria.pdf">curriculo_maria.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Carlos Oliveira</td>
+            <td>(31) 99876-5432</td>
+            <td><a href="curriculo_carlos.pdf">curriculo_carlos.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Ana Costa</td>
+            <td>(41) 98765-4321</td>
+            <td><a href="curriculo_ana.pdf">curriculo_ana.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Pedro Lima</td>
+            <td>(51) 91234-5678</td>
+            <td><a href="curriculo_pedro.pdf">curriculo_pedro.pdf</a></td>
+        </tr>
+        <tr>
+            <td>João Silva</td>
+            <td>(11) 98765-4321</td>
+            <td><a href="curriculo_joao.pdf">curriculo_joao.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Maria Santos</td>
+            <td>(21) 91234-5678</td>
+            <td><a href="curriculo_maria.pdf">curriculo_maria.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Carlos Oliveira</td>
+            <td>(31) 99876-5432</td>
+            <td><a href="curriculo_carlos.pdf">curriculo_carlos.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Ana Costa</td>
+            <td>(41) 98765-4321</td>
+            <td><a href="curriculo_ana.pdf">curriculo_ana.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Pedro Lima</td>
+            <td>(51) 91234-5678</td>
+            <td><a href="curriculo_pedro.pdf">curriculo_pedro.pdf</a></td>
+        </tr>
+        <tr>
+            <td>João Silva</td>
+            <td>(11) 98765-4321</td>
+            <td><a href="curriculo_joao.pdf">curriculo_joao.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Maria Santos</td>
+            <td>(21) 91234-5678</td>
+            <td><a href="curriculo_maria.pdf">curriculo_maria.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Carlos Oliveira</td>
+            <td>(31) 99876-5432</td>
+            <td><a href="curriculo_carlos.pdf">curriculo_carlos.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Ana Costa</td>
+            <td>(41) 98765-4321</td>
+            <td><a href="curriculo_ana.pdf">curriculo_ana.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Pedro Lima</td>
+            <td>(51) 91234-5678</td>
+            <td><a href="curriculo_pedro.pdf">curriculo_pedro.pdf</a></td>
+        </tr>
+        <tr>
+            <td>João Silva</td>
+            <td>(11) 98765-4321</td>
+            <td><a href="curriculo_joao.pdf">curriculo_joao.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Maria Santos</td>
+            <td>(21) 91234-5678</td>
+            <td><a href="curriculo_maria.pdf">curriculo_maria.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Carlos Oliveira</td>
+            <td>(31) 99876-5432</td>
+            <td><a href="curriculo_carlos.pdf">curriculo_carlos.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Ana Costa</td>
+            <td>(41) 98765-4321</td>
+            <td><a href="curriculo_ana.pdf">curriculo_ana.pdf</a></td>
+        </tr>
+        <tr>
+            <td>Pedro Lima</td>
+            <td>(51) 91234-5678</td>
+            <td><a href="curriculo_pedro.pdf">curriculo_pedro.pdf</a></td>
+        </tr>
+        </table>
+
+
+
+
+    <form>
+        <div id="nomeDoColaborador">
+            <label for="nome">Nome:</label>
+            <input class="nome" type="text" id="nome" name="nome" required>
+        </div>
+        
+        <div class="estiloDEClasse">
+            <label for="telefone">Telefone:</label>
+            <input class="telefone" type="tel" id="telefone" name="telefone" required>
+        </div>
+        
+        <div class="estiloDEClasse">
+            <label for="curriculo">Anexar Currículo:</label>
+            <input type="file" class="BotaoAnexo" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+        </div>
+        
+        <button class="btn btnEnviar" type="submit">Enviar</button>
+        <button class="btn btnIndicacao" type="submit">Enviar com Indicao</button>
+        <button class="btn btnLimpar " type="submit">Limpar</button>
+    </form>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p>rodape</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+:hover 
+é uma pseudo-classe
+que é usada para aplicar estilos a um elemento quando o mouse passa
+ sobre ele.
+Ela é comumente usada para criar efeitos de hover em botões,
+ links e outros elementos   
+interativos, melhorando a experiência do usuário 
+e a interatividade da página.
+
+
+
+:nth-child(2n)
+é um seletor CSS que seleciona
+ elementos filhos com base em
+  sua posição
+ dentro do pai. 
+ 
+ O "2n" indica que ele seleciona os 
+ elementos filhos
+ que estão em posições pares
+  (2º, 4º, 6º, etc.) 
+  dentro do elemento pai.
