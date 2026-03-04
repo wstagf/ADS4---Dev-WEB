@@ -20,3 +20,14 @@ e a interatividade da página.
  que estão em posições pares
   (2º, 4º, 6º, etc.) 
   dentro do elemento pai.
+
+
+
+  estilizar elemntos por heranca
+
+  div > p
+   estiliza o P que é filho DIRETO de DIV
+
+
+div * p
+   estiliza o P que é filho DIRETO de DIV
