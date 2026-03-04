@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script async="" type="text/javascript" src="xxx.js"></script> -->
+    <script>
+        let quantidadeAlunos = 0
+
+        const mostrarNumero = () => {
+            console.log("O Numero é: " + quantidadeAlunos)
+            alert("O numero mudou para " 
+                + quantidadeAlunos)
+        }
+
+        const adicionarUM = () => {
+            quantidadeAlunos = quantidadeAlunos + 1
+            mostrarNumero()
+        }
+
+        const adicionarNQuantidade = (parametroRecebido) => {
+            quantidadeAlunos = quantidadeAlunos + parametroRecebido
+            mostrarNumero()
+        }
+
+        const diminuirUM = () => {
+            quantidadeAlunos = quantidadeAlunos - 1
+            mostrarNumero()
+        }
+
+        const diminuirNQuantidade = (parametroRecebido) => {
+            quantidadeAlunos = quantidadeAlunos - parametroRecebido
+            mostrarNumero()
+        }
+    </script>
+</head>
+<body>
+    <button onclick="adicionarNQuantidade(23)" > 
+        Adicionar N unidades
+    </button>
+    <br/>
+    <button onclick="adicionarUM()"> 
+        Adicionar 1 unidade
+    </button>
+    <br/>
+    <button onclick="mostrarNumero()"> 
+        Mostrar
+    </button>
+    <br/>
+    <button onclick="diminuirUM()"> 
+        Diminuir 1 unidade
+    </button>
+    <br/>
+    <button onclick="diminuirNQuantidade(19)" > 
+        Diminuir N unidades
+    </button>
+</body>
+</html>
