@@ -114,4 +114,20 @@ switch(idade) {
 }
 
 
+for (int i = 0; i< 10; i++ ){
+    // seu codigio aqui
+}
+
+ganhei = false
+while(!ganhei) {
+    // seu codigo aqui;
+    if(6 == "") {
+        ganhei = true
+    }
+}
+
+do {
+    // seu codigo aqui;
+} while (j < 100)
+
 
