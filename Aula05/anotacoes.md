@@ -131,3 +131,25 @@ do {
 } while (j < 100)
 
 
+
+
+["Thiago", "Matheus"] // isso é um array
+
+
+{ 
+    "nome": "Thiago",
+    "idade": 39
+}  
+// isso é um json  Objeto
+
+
+[
+    {
+        "empresa": "Senai",
+        "dataInicio": "01/01/2025"
+    },
+    {
+        "empresa": "Puc",
+        "dataInicio": "01/06/2025"
+    },
+]
