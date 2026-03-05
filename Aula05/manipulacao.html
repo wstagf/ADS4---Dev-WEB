@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Meu titulo</h1>
+
+    <p id="pagrafo">isso daqui é um paragrafo que sera alterado</p>
+
+
+    <br>
+    <input id="name" type="text" placeholder="Seu nome" />
+    <button onclick="alterarValor()">Alterar</button>
+
+
+    <label for="times">Escolha um time:</label>
+    <select id="times" onchange="configurarTime()">
+        <option value="vl">Vila Nova</option>
+        <option value="go">Goias</option>
+        <option value="acg">Atletico</option>
+    </select>
+    <script>
+        const alterarValor = () => {
+            let valor = 
+                document.getElementById("name").value
+            //alert(valor)
+            const t = document.getElementById("title")
+            t.innerText = valor
+        }
+
+        const configurarTime = () => {
+            let banana = 
+                document.getElementById("times").value
+
+            const y = document.getElementById("pagrafo")
+            
+            y.innerText = "O melhor time do mundo é " + banana
+        }
+    </script>
+</body>
+</html>
