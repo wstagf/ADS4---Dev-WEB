@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const montarDinamico = () => {     
+            const lista = 
+                document.getElementById("lista")
+            
+            for (let index = 0; index < 10; index++) {
+                console.log(index)
+                const item = document.createElement('li')
+                item.innerText = "Item Dinamico " + index
+                lista.appendChild(item)
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="montarDinamico()">Adicionar item</button>
+    <h1>Isso é uma lista que sera gerada dinamicamente</h1>
+    <ol id="lista">
+    </ol>
+
+</body>
+</html>
+
+
+
