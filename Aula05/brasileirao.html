@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let time = ""
+        const perceberMudanca = (e) => {
+            time = e.value
+        }
+
+        const mostrarMensagem = () => {
+            alert("voce digitou " + time)
+        }
+    </script>
+</head>
+<body>
+    <input 
+        type="text" 
+        onchange="perceberMudanca(this)"
+        placeholder="Digite o nome do time"
+    ></input>
+    
+    <button onclick="mostrarMensagem()">Mostrar mensagem</button>
+</body>
+</html>
