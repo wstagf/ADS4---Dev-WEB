@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo - Desenvolvedor Mobile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            color: #2c3e50;
+        }
+        .contact {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .job-title {
+            font-weight: bold;
+        }
+        .company {
+            font-style: italic;
+        }
+        .date {
+            float: right;
+            color: #777;
+        }
+        .clear {
+            clear: both;
+        }
+        .skills span {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin: 5px 5px 0 0;
+            font-size: 13px;
+        }
+    </style>
+    <script>
+        const gerarCurriculo = () => {
+            document.getElementById("nome").innerText = "Thiago Augusto"
+            document.getElementById("profissao").innerText = "Professor Universitario - Desenvolvedor FullStack + Movel + IA"
+        }
+    </script>
+</head>
+<body>
+<button onclick="gerarCurriculo()">gerarCurriculo</button>
+<div class="container">
+
+    <h1 id="nome">MEu nome aqui</h1>
+    <p><strong id="profissao">Desenvolvedor Mobile</strong></p>
+    
+    <div class="contact">
+        📍 São Paulo – SP <br>
+        📧 joao@email.com | 📞 (11) 99999-9999 <br>
+        🔗 LinkedIn: linkedin.com/in/joaodasilva <br>
+        🔗 GitHub: github.com/joaodasilva
+    </div>
+
+    <h2>Resumo Profissional</h2>
+    <p>
+        Desenvolvedor Mobile com 4+ anos de experiência no desenvolvimento de aplicativos
+        Android e iOS. Experiência com arquitetura limpa, consumo de APIs REST,
+        integração com Firebase e publicação nas lojas oficiais.
+    </p>
+
+    <h2>Competências Técnicas</h2>
+    <div class="skills">
+        <span>Kotlin</span>
+        <span>Java</span>
+        <span>Dart</span>
+        <span>Swift</span>
+        <span>Flutter</span>
+        <span>React Native</span>
+        <span>Android SDK</span>
+        <span>iOS SDK</span>
+        <span>Firebase</span>
+        <span>REST API</span>
+        <span>Clean Architecture</span>
+        <span>MVVM</span>
+        <span>Git</span>
+        <span>CI/CD</span>
+    </div>
+
+    <h2>Experiência Profissional</h2>
+
+    <p class="job-title">Desenvolvedor Mobile <span class="date">Jan/2022 – Atual</span></p>
+    <p class="company">Empresa XYZ Tecnologia</p>
+    <ul>
+        <li>Desenvolvimento de aplicativo de delivery com mais de 50 mil usuários.</li>
+        <li>Integração com Firebase Authentication e Cloud Firestore.</li>
+        <li>Integração com gateway de pagamento.</li>
+        <li>Publicação na Google Play e Apple App Store.</li>
+    </ul>
+
+    <div class="clear"></div>
+
+    <p class="job-title">Desenvolvedor Mobile Júnior <span class="date">Mar/2020 – Dez/2021</span></p>
+    <p class="company">Tech Solutions LTDA</p>
+    <ul>
+        <li>Desenvolvimento de aplicativo corporativo para gestão interna.</li>
+        <li>Criação de dashboards e relatórios.</li>
+        <li>Correção de bugs e melhorias de performance.</li>
+        <li>Integração com APIs REST.</li>
+    </ul>
+
+    <h2>Projetos</h2>
+    <ul>
+        <li><strong>App Financeiro:</strong> Controle de gastos mensais desenvolvido em Flutter.</li>
+        <li><strong>App de Academia:</strong> Controle de treinos desenvolvido em React Native.</li>
+    </ul>
+
+    <h2>Formação Acadêmica</h2>
+    <p>
+        Bacharelado em Sistemas de Informação <br>
+        Universidade XYZ – Conclusão: 2019
+    </p>
+
+    <h2>Idiomas</h2>
+    <ul>
+        <li>Português – Nativo</li>
+        <li>Inglês – Intermediário</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
