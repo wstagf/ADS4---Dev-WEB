@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Currículo - Desenvolvedor Mobile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f4f6f9;
+        color: #333;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        margin-bottom: 5px;
+        color: #2c3e50;
+      }
+      h2 {
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 5px;
+        margin-top: 30px;
+        color: #2c3e50;
+      }
+      .contact {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #555;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      .job-title {
+        font-weight: bold;
+      }
+      .company {
+        font-style: italic;
+      }
+      .date {
+        float: right;
+        color: #777;
+      }
+      .clear {
+        clear: both;
+      }
+      .skills span {
+        display: inline-block;
+        background: #2c3e50;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        margin: 5px 5px 0 0;
+        font-size: 13px;
+      }
+    </style>
+    <script>
+
+      const dadosPessoais = {
+          "geral": {
+              "nome_completo": "T****** A****** G******** F******** S****** S****",
+              "lattes_url": "https://lattes.cnpq.br/***************",
+              "lattes_id": "***************",
+              "ultima_atualizacao": "**/**/2025",
+              "resumo": "Profissional da área de tecnologia da informação com formação em desenvolvimento de sistemas e especialização em interfaces web. Experiência em arquitetura da informação, UX, desenvolvimento de aplicações web e mobile e infraestrutura de TI."
+          },
+          "identificacao": {
+              "nome": "T****** A****** G******** F******** S****** S****",
+              "nome_citacao": "S****, T. A. G. F. S.",
+              "nacionalidade": "Brasil"
+          },
+          "formacao_academica": [
+              {
+                "periodo": "2021 - 2023",
+                "tipo": "Especialização",
+                "curso": "Gerenciamento de Projetos",
+                "instituicao": "Instituição de ensino (IEL/GO)",
+                "carga_horaria": "360h"
+              },
+              {
+                "periodo": "2012 - 2017",
+                "tipo": "Especialização",
+                "curso": "Interfaces Ricas para Web",
+                "instituicao": "Universidade Federal (UFG)",
+                "titulo_trabalho": "Software de Gerenciamento de Conteúdo",
+                "orientador": "V****** S**** P****"
+              },
+              {
+                "periodo": "2010 - 2012",
+                "tipo": "Graduação",
+                "curso": "Sistemas para Internet",
+                "instituicao": "Instituição de ensino superior (UNIFAN)",
+                "titulo_trabalho": "Sistema Gerador de Conteúdo Web para uma Loja Virtual",
+                "orientador": "L****** A****"
+              }
+          ],
+          "atuacao_profissional": [
+              {
+                "instituicao": "Centro Universitário (privado)",
+                "periodo": "2024 - Atual",
+                "cargo": "Professor",
+                "carga_horaria": 40,
+                "descricao": "Docente em cursos da área de computação ministrando disciplinas de programação, banco de dados e desenvolvimento web."
+              },
+              {
+                "instituicao": "Faculdade de tecnologia (SENAI)",
+                "periodo": "2025 - Atual",
+                "cargo": "Professor",
+                "carga_horaria": 24,
+                "descricao": "Professor de Engenharia de Software e produção de conteúdos educacionais."
+              },
+              {
+                "instituicao": "Empresa de tecnologia",
+                "periodo": "2023",
+                "cargo": "Professor EAD / Autor de aulas",
+                "descricao": "Gravação de aulas sobre desenvolvimento mobile com Dart e Flutter."
+              },
+              {
+                "instituicao": "Empresa de serviços tecnológicos",
+                "periodo": "2022 - 2023",
+                "cargo": "Analista de Desenvolvimento de Sistemas"
+              },
+              {
+                "instituicao": "Empresa de tecnologia",
+                "periodo": "2022",
+                "cargo": "Analista de Desenvolvimento de Sistemas",
+                "descricao": "Manutenção de aplicações React, criação de gráficos e testes unitários."
+              },
+              {
+                "instituicao": "Startup de tecnologia",
+                "periodo": "2021 - 2022",
+                "cargo": "Programador de Sistemas de Informação",
+                "descricao": "Desenvolvimento e manutenção de aplicações React."
+              },
+              {
+                "instituicao": "Empresa de software",
+                "periodo": "2020 - 2021",
+                "cargo": "Desenvolvedor Mobile",
+                "descricao": "Desenvolvimento de aplicações móveis com Ionic/Angular e integração com APIs."
+              }
+          ],
+          "idiomas": [
+              {
+                "idioma": "Inglês",
+                "compreensao": "Básico",
+                "fala": "Básico",
+                "leitura": "Intermediário",
+                "escrita": "Básico"
+              },
+              {
+                "idioma": "Espanhol",
+                "compreensao": "Intermediário",
+                "fala": "Básico",
+                "leitura": "Intermediário",
+                "escrita": "Intermediário"
+              }
+          ],
+          "premios": [
+              {
+                "ano": 2019,
+                "titulo": "2º lugar em Hackathon de Automação",
+                "instituicao": "Empresa de soluções tecnológicas"
+              }
+          ],
+          "producoes": {
+              "apresentacoes": [
+                {
+                    "titulo": "CI/CD de Aplicação Flutter",
+                    "ano": 2020,
+                    "tipo": "Palestra"
+                }
+              ],
+              "cursos_ministrados": [
+                "Desenvolvimento de Software com Vue",
+                "Excel Completo",
+                "Desenvolvimento Mobile com Flutter",
+                "Prototipação com Angular e Firebase",
+                "Workshop de Design Thinking"
+              ]
+          }
+          }
+
+          const gerarCurriculo = () => {
+              document.getElementById("nome").innerText = dadosPessoais.geral.nome_completo
+              document.getElementById("profissao").innerText = dadosPessoais.geral.resumo
+
+              const listaFormacaos = document.getElementById("listaFormacao")
+
+              for (let index = 0; index <     dadosPessoais.formacao_academica.length; index++) {
+                  const element = dadosPessoais.formacao_academica[index];
+                  const txt = element.curso + " (" + element.instituicao + ") (" + element.periodo + ")"
+                  const item = document.createElement("li")/
+                  item.innerText = txt
+                  listaFormacaos.appendChild(item)
+              }
+          }
+    </script>
+  </head>
+  <body>
+    <button onclick="gerarCurriculo()">gerarCurriculo</button>
+    <div class="container">
+      <a href="#tituloIdioma">Idiomas</a>
+
+      <h1 id="nome">MEu nome aqui</h1>
+      <p><strong id="profissao">Desenvolvedor Mobile</strong></p>
+
+      <h2>Resumo Profissional</h2>
+      <p>
+        Desenvolvedor Mobile com 4+ anos de experiência no desenvolvimento de
+        aplicativos Android e iOS. Experiência com arquitetura limpa, consumo de
+        APIs REST, integração com Firebase e publicação nas lojas oficiais.
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      </p>
+
+      <h2>Competências Técnicas</h2>
+      <div class="skills">
+        <span>Kotlin</span>
+        <span>Java</span>
+        <span>Dart</span>
+        <span>Swift</span>
+        <span>Flutter</span>
+        <span>React Native</span>
+        <span>Android SDK</span>
+        <span>iOS SDK</span>
+        <span>Firebase</span>
+        <span>REST API</span>
+        <span>Clean Architecture</span>
+        <span>MVVM</span>
+        <span>Git</span>
+        <span>CI/CD</span>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <h2>Experiência Profissional</h2>
+
+      <p class="job-title">
+        Desenvolvedor Mobile <span class="date">Jan/2022 – Atual</span>
+      </p>
+      <p class="company">Empresa XYZ Tecnologia</p>
+      <ul>
+        <li>
+          Desenvolvimento de aplicativo de delivery com mais de 50 mil usuários.
+        </li>
+        <li>Integração com Firebase Authentication e Cloud Firestore.</li>
+        <li>Integração com gateway de pagamento.</li>
+        <li>Publicação na Google Play e Apple App Store.</li>
+      </ul>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="clear"></div>
+
+      <p class="job-title">
+        Desenvolvedor Mobile Júnior
+        <span class="date">Mar/2020 – Dez/2021</span>
+      </p>
+      <p class="company">Tech Solutions LTDA</p>
+      <ul>
+        <li>Desenvolvimento de aplicativo corporativo para gestão interna.</li>
+        <li>Criação de dashboards e relatórios.</li>
+        <li>Correção de bugs e melhorias de performance.</li>
+        <li>Integração com APIs REST.</li>
+      </ul>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <h2>Projetos</h2>
+      <ul>
+        <li>
+          <strong>App Financeiro:</strong> Controle de gastos mensais
+          desenvolvido em Flutter.
+        </li>
+        <li>
+          <strong>App de Academia:</strong> Controle de treinos desenvolvido em
+          React Native.
+        </li>
+      </ul>
+
+      <h2>Formação Acadêmica</h2>
+
+      <ul id="listaFormacao"></ul>
+
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <h2 id="tituloIdioma">Idiomas</h2>
+      <ul>
+        <li>Português – Nativo</li>
+        <li>Inglês – Intermediário</li>
+      </ul>
+    </div>
+  </body>
+</html>
