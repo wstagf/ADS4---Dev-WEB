@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+       const buscarDados = async (link) => {
+            const response = await fetch(link);
+            
+
+            if (response.status < 300) {
+                
+                const result = await response.json();
+
+                console.log("detalhes", result);
+
+                document.getElementById("nomePokemon").innerText = result.name;
+
+                const img = document.createElement("img");
+
+                img.src = result.sprites.front_default;
+
+                
+                const imgPokemon = document.getElementById("imgPokemon");
+                imgPokemon.innerText = ""
+                imgPokemon.appendChild(img);
+            }
+        }
+        const carregar = async ()  =>  {
+            const response = await fetch(
+                'https://pokeapi.co/api/v2/pokemon?offset=00&limit=1350'  ) 
+            
+            console.log(response)
+            if(response.status < 300) {
+                const result = await response.json()
+
+                const quantidade = result.count
+                const lista = result.results
+
+                console.log("quantidade", quantidade)
+                console.log("lista", lista)
+
+                const refLista = document.getElementById("listaPokemon")
+                for (let i = 0; i < quantidade -1; i++) {
+                    const element = lista[i];
+                    console.log("element", element)
+                    const itemlista = document.createElement("li")
+                    
+                    const linkItem = document.createElement("div")
+                    linkItem.classList.add("item")
+                    linkItem.innerText = element.name
+                    //  + " - " + element.url
+                    linkItem.onclick = () => {buscarDados(element.url)}
+                    itemlista.appendChild(linkItem)
+
+                    refLista.appendChild(itemlista)
+                }
+                console.log(result)
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="carregar()" value="Carregar pokemon"/>
+
+
+    <h1>Minha lista pokemon</h1>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <ul id="listaPokemon">
+    
+        </ul>
+        <div id="detalhes">
+            <h1>Nome: <span id="nomePokemon"></span></h1>
+            <div id="imgPokemon"></div>
+        </div>
+    </div>
+</body>
+</html>
