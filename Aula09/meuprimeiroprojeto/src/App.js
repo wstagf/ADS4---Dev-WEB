@@ -1,26 +1,40 @@
 import { useState } from "react";
 
 function App() {
+  const [altura, setAltura] = useState(0)
+  const [peso, setPeso] = useState(0)
+  const [imc, setIMC] = useState(0)
 
-  let [numeroTabuada, setNumeroTabuada ] = useState(0)
-
-  const alerta = () => {
-    setNumeroTabuada(numeroTabuada + 1) 
+  const calcular = () => {
+    setIMC(peso/(altura*altura))
   }
-  const lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  const nome = "Senai";
+
+  const manipularInputAltura = (e) => { 
+    const novoValor = e.target.value; 
+   
+    if(!isNaN(parseFloat(novoValor))) {
+      setAltura(novoValor)
+    }
+  }
+
+  const manipularInputPeso = (e) => { 
+    const novoValor = e.target.value; 
+   
+    if(!isNaN(parseFloat(novoValor))) {
+      setPeso(novoValor)
+    }
+  }
   return (
     <div className="App">
-      <h1>{nome} Aula Web</h1>
-      <button onClick={alerta}>Clique aqui</button>
-      <h1>Tabuada do {numeroTabuada}</h1>
-      <ul>
-        {
-          lista.map((n) => {
-            return (<li>{numeroTabuada} x {n + 1} = { numeroTabuada * (n + 1)}</li>);
-          })
-        }       
-      </ul>
+      <h1>Vamos calcular o seu IMC</h1>
+      <span>Altura em metros</span>
+      <input type="text" placeholder="1.80" onChange={manipularInputAltura}></input>
+      <br></br> 
+      <span>Peso em kilos</span>
+      <input type="text" placeholder="83.620" onChange={manipularInputPeso}></input>
+      <button onClick={calcular}>Calcular</button>
+
+      <h2>Seu IMC Calculado é {imc}</h2>
     </div>
   );
 }
