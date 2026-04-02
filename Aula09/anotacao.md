@@ -53,3 +53,27 @@ function App() {
 export default App;
 
 Neste exemplo, o componente App é uma função que retorna um elemento JSX. O JSX é uma sintaxe que permite escrever código semelhante ao HTML dentro do JavaScript. O componente renderiza um título h1 que exibe o valor da variável nome, que é "Senai". O componente é exportado para ser usado em outros arquivos do projeto.
+
+
+
+para renderizar uma lista de números usando o método map, você pode fazer o seguinte:
+
+const lista = [1, 2, 3, 4, 5];
+
+{lista.map((numero) => {
+    return (<li>numero</li>);
+  }) }  
+
+
+
+a partir da palavra return 
+ tudo o que está dentro do () 
+ será utilizado como CODIGO HTML 
+
+ caso voce queira usar scripts novamente, 
+ deve abrir um { e fechar com }
+
+
+
+
+o react implementa IMUTABILIDADE, ou seja, os dados não podem ser alterados diretamente. Em vez disso, para atualizar o estado de um componente, é necessário criar uma nova cópia do estado com as alterações desejadas. Isso ajuda a garantir que o estado seja atualizado de forma previsível e eficiente, evitando efeitos colaterais indesejados.
