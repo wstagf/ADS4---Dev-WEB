@@ -77,3 +77,28 @@ a partir da palavra return
 
 
 o react implementa IMUTABILIDADE, ou seja, os dados não podem ser alterados diretamente. Em vez disso, para atualizar o estado de um componente, é necessário criar uma nova cópia do estado com as alterações desejadas. Isso ajuda a garantir que o estado seja atualizado de forma previsível e eficiente, evitando efeitos colaterais indesejados.
+
+
+
+
+RESUMO
+
+{nome} - Interpolação de variáveis em JSX (somente leitura)
+
+
+onClick={alerta} - Atribuição de eventos em JSX (somente leitura)
+
+
+useState - Hook para gerenciamento de estado em componentes funcionais (leitura e escrita) pois o react implementa imutabilidade, ou seja, os dados não podem ser alterados diretamente. Em vez disso, para atualizar o estado de um componente, é necessário criar uma nova cópia do estado com as alterações desejadas. Isso ajuda a garantir que o estado seja atualizado de forma previsível e eficiente, evitando efeitos colaterais indesejados.
+
+
+
+A interpolacao pode conter regra de negocio
+
+{
+  // tudo o que estiver dentro do {} sera interpretado como codigo javascript, calculos, regras de negocio, busca no banco de dados, etc
+  lista.map((n) => {
+    // aqui dentro pode ser feito qualquer tipo de regra de negocio, calculo, etc
+    return (<li>{numeroTabuada} x {n + 1} = { numeroTabuada * (n + 1)}</li>);
+  })
+}    
