@@ -102,3 +102,10 @@
 # Conteudo da pagina...
 
     - app.tsx é a pagina principal do projeto, onde o conteudo é renderizado.
+
+
+
+
+# informacoes uteis
+
+    - no arquivo tsx nós misturamos html com javascript, por isso é necessário utilizar a sintaxe do react para criar os elementos html, como por exemplo, utilizar className ao invés de class, e fechar as tags corretamente. Igualmente toda vez que queremos sair do html para utilizar javascript, é necessário utilizar as chaves {} para indicar que estamos utilizando javascript.
