@@ -50,6 +50,55 @@
             }
 
             export default App
-
         ```
 
+
+## Criar um arquivo chamado login.tsx
+    com o mesmo conteudo abaixo,
+
+    ```tsx
+    import './App.css'
+
+    function Login() {
+        return (
+            <div>COLE O CODIGO HTML DO CHATPT AQUI </div>
+        )
+    }
+    ```
+
+    * Colocar nele um html simples de um formulario de login, com os seguintes campos:
+    - email
+    - senha
+    - botão de login
+
+    * pode pedir para o chatgpt criar o codigo do formulario de login, caso queira.
+    * somente cole o conteudo separado. 
+        - app.css ficará o style que o chatgpt criar. 
+
+        - login.tsx ficará o html do formulario de login.
+
+        - Lembrar de trocar de `class` para `className` no html, para que o react entenda.
+        - lembrar de fechar as tags input corretamente, para evitar erros de sintaxe no react.
+
+# Utilizar o componete Login na pagina principal do projeto
+
+    - Para isso, é necessário importar o componente Login no arquivo App.tsx e utilizá-lo dentro do return.
+    
+    ```tsx
+
+    import './App.css'
+    import Login from './login'
+    function App() {
+        return (
+            <Login></Login>
+        )
+    }
+    export default App
+    ```
+    
+
+
+
+# Conteudo da pagina...
+
+    - app.tsx é a pagina principal do projeto, onde o conteudo é renderizado.

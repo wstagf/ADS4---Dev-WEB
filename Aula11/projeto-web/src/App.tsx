@@ -1,9 +1,13 @@
 import './App.css'
+import Login from './login'
 
 function App() {
 
-  return (
-    <p>Olá Senai</p>
+return (
+  <div>
+    <Login></Login> 
+  </div>
+    
   )
 }
 
