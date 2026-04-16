@@ -17,35 +17,34 @@ const manipularLogin = () => {
 
 return (
     <>
-    <div className="container">
-        <div className="left"></div>
+        <div className="container">
+            <div className="left"></div>
 
-        <div className="right">
-        <div className="login-box">
-            <h2>Entrar</h2>
-            <div className="input-group">
-            <input type="text" placeholder="Usuário" onChange={
-                    (novoValor: React.ChangeEvent<HTMLInputElement>) => {
-                        setUsuario(novoValor.target.value)
-                    }
-                } />
+            <div className="right">
+                <div className="login-box">
+                    <h2>Entrar</h2>
+                    <div className="input-group">
+                    <input type="text" placeholder="Usuário" onChange={
+                            (novoValor: React.ChangeEvent<HTMLInputElement>) => {
+                                setUsuario(novoValor.target.value)
+                            }
+                        } />
+                    </div>
+
+                    <div className="input-group">
+                    <input type="password" placeholder="Senha" onChange={
+                            (novoValor: React.ChangeEvent<HTMLInputElement>) => {
+                                setSenha(novoValor.target.value)
+                            }
+                        } />
+                    </div>
+
+                    <button className="btn" onClick={manipularLogin}>Entrar</button>
+                </div>
             </div>
-
-            <div className="input-group">
-            <input type="password" placeholder="Senha" onChange={
-                    (novoValor: React.ChangeEvent<HTMLInputElement>) => {
-                        setSenha(novoValor.target.value)
-                    }
-                } />
-            </div>
-
-            <button className="btn" onClick={manipularLogin}>Entrar</button>
         </div>
-        </div>
-
-    </div>
-                        <p>Como ainda nao temos um backend para testar, o login vai funcionar se utilizar o usuario 'admin' e a senha '123'</p>
-</>
+        <p>Como ainda nao temos um backend para testar, o login vai funcionar se utilizar o usuario 'admin' e a senha '123'</p>
+    </>
   )
 }
 
