@@ -1,19 +1,21 @@
 import { useState } from 'react'
+import LoginService from './services/login'
 import './App.css'
 
 function Login() {
 const [usuario, setUsuario] = useState('')
 const [senha, setSenha] = useState('')  
 
-const manipularLogin = () => {
-    if(usuario !== 'admin' || senha !== '123') {
-        alert('Usuário ou senha incorretos!') 
-    } else {
-        alert('Login realizado com sucesso!')
-    }
+const manipularLogin = async () => {
+   const resultado = await LoginService.login(
+                        usuario, senha
+                     )
+   if(resultado) {
+    alert('Login bem sucedido!')
+   } else {
+    alert('Login falhou. Verifique suas credenciais.')
+   }
 }
-
-
 
 return (
     <>
