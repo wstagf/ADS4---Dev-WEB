@@ -1,4 +1,4 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 import AnimalService from '../../services/animal_service'
 import './animal.css'
 import type AnimalModel from '../../model/animal_model'
@@ -6,6 +6,9 @@ import type AnimalModel from '../../model/animal_model'
 function Animal() {
 
     const [listAnimais, setListaAnimais] = useState<AnimalModel[]>([ ])
+    const [idade, setIdade] = useState(0)
+    const [raca, setRaca] = useState('')
+    const [peso, setPeso] = useState(0)
 
     const carregar = async () => {
         alert('Carregando os animais...')
@@ -22,7 +25,27 @@ function Animal() {
                 alert('Animal excluido com sucesso!')
                 carregar();
             }
-            
+
+    }
+
+    const enviarNovoAnimal = async () => {
+        const novoAnimal: AnimalModel = {
+            id: undefined,
+            idade: idade,
+            raca: raca,
+            peso: peso,
+            estaVivo: true,
+            comidasQueGosta: []
+        }
+        const resultado = await AnimalService.inserir(novoAnimal)
+        if(resultado) {
+            alert('Animal inserido com sucesso!')
+            carregar();
+        } else
+        {
+            alert('Falha ao inserir animal. Verifique o console para mais detalhes.')
+        }
+         
     }
 
 
@@ -31,6 +54,14 @@ function Animal() {
         <button onClick={() => {carregar()}}>Listar Animais</button>
 
         <h2>Lista de Animais</h2>
+        {idade} - {raca} - {peso}
+
+        <form >
+            <input type="text" placeholder="Idade" onChange={(e) => setIdade(parseInt(e.target.value))}  />
+            <input type="text" placeholder="Raça" onChange={(e) => setRaca(e.target.value)}  />
+            <input type="text" placeholder="Peso" onChange={(e) => setPeso(parseFloat(e.target.value))} />
+            <button type="button" onClick={() => {enviarNovoAnimal()}}>Adicionar Animal</button>
+        </form>
 
         <table className="tabela-animal">
             <thead>

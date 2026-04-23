@@ -134,7 +134,7 @@ app.post("/animal", (req, resp) => {
     comidasQueGosta
   }
   database.animais.push(novoAnimal)
-  return resp.json(novoAnimal)
+  return resp.status(201).json(novoAnimal)
 })
 
 

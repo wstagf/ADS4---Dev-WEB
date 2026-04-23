@@ -18,6 +18,17 @@ class AnimalService {
             return false;
         }
     }
+
+    static async inserir(novoAnimal: AnimalModel): Promise<boolean> { 
+        console.log('Enviando novo animal para o backend:', novoAnimal);
+
+        const response = await axios.post("http://localhost:3000/animal", novoAnimal)
+        if(response.status == 201) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 export default AnimalService;
