@@ -9,6 +9,15 @@ class AnimalService {
 
             return response.data;
     }
+
+    static async apagar(id: string): Promise<boolean> {
+        const response = await axios.delete("http://localhost:3000/animal/"+id)
+        if(response.status == 200) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 export default AnimalService;

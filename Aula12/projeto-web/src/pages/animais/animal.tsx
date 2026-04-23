@@ -16,6 +16,16 @@ function Animal() {
         }
     }
 
+    const excluirAnimal = async (id: number | undefined) => {
+          const resultado = await AnimalService.apagar(id ? id.toString() : '')
+            if(resultado) {
+                alert('Animal excluido com sucesso!')
+                carregar();
+            }
+            
+    }
+
+
     return (
          <div className="card-tabela">
         <button onClick={() => {carregar()}}>Listar Animais</button>
@@ -29,6 +39,7 @@ function Animal() {
                     <th>Idade</th>
                     <th>Raça</th>
                     <th>Está Vivo?</th>
+                    <th>Acoes</th>
                 </tr>
             </thead>
 
@@ -41,6 +52,13 @@ function Animal() {
                             <td>{animal.idade}</td>
                             <td>{animal.raca}</td>
                             <td>{animal.estaVivo ? 'Sim' : 'Não'}</td>
+                            <td>
+                                <button onClick={() => {
+                                    excluirAnimal(animal.id)
+                                }
+                                }>Excluir Animal</button>
+
+                            </td>
                         </tr>
                     )
                 })} 
