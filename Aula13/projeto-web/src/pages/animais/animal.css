@@ -1,0 +1,67 @@
+ /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Tela inteira */
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #2b4c7e, #1f3a63);
+            padding: 40px;
+        }
+
+        /* Card */
+        .card-tabela {
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Título */
+        .card-tabela h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        /* Tabela */
+        .tabela-animal {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Cabeçalho */
+        .tabela-animal thead {
+            background-color: #1f2937;
+            color: white;
+        }
+
+        .tabela-animal th {
+            padding: 12px;
+            text-align: left;
+        }
+
+        /* Células */
+        .tabela-animal td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Zebra */
+        .tabela-animal tbody tr:nth-child(odd) {
+            background-color: #f9fafb;
+        }
+
+        .tabela-animal tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        /* Hover */
+        .tabela-animal tbody tr:hover {
+            background-color: #e5e7eb;
+            transition: 0.2s;
+        }
