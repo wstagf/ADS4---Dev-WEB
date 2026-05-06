@@ -8,3 +8,28 @@
 1. Criar as pastas, 
     - controllers: para colocar a lógica de negócio, ou seja, as funções que realizam os cálculos.
     - routes: para colocar as rotas, ou seja, os endpoints que a API vai expor.
+
+
+
+- todo arquivo XXXX-Routes.js deve exportar um router do express
+
+exemplo de conteudo do arquivo calcRoutes.js:
+
+```javascript
+const express = require("express");
+const router = express.Router();
+
+// aqui vão as rotas, por exemplo:
+router.post("/xxxx", (req, res) => {
+    // aqui vai a lógica de negócio, ou seja, os cálculos
+});
+
+module.exports = router;
+
+```
+
+
+- todo arquivo XXXX-Controller.js deve exportar um objeto com as funções que realizam a lógica de negócio, ou seja, os cálculos.
+
+
+

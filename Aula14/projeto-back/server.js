@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const calcRoutes = require("./routes/calcRoutes");
+const usuarioRoutes = require("./routes/usuarioRoutes");
 
 // =============================
 // MIDDLEWARES
@@ -15,21 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(calcRoutes);
-
-listaDeUsuarios = [];
-app.get("/usuarios", (req, res) => {
-  res.send(listaDeUsuarios);
-});
-
-app.post("/usuarios", (req, res) => {
-  const { nome, email } = req.body;
-  const destino = req.headers["destino"] || "desconecido";
-  const queryParamter = req.query.destino || "desconecido";
-  console.log(`Novo usuário: ${nome} (${email})`); 
-  listaDeUsuarios.push({ nome, email });
-
-  res.send({ mensagem: `queryParamter ${queryParamter} ` });
-});
+app.use(usuarioRoutes);
 
 const PORT = 3001;
 
