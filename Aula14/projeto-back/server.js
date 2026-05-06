@@ -3,18 +3,14 @@ const cors = require("cors");
 const app = express();
 const calcRoutes = require("./routes/calcRoutes");
 const usuarioRoutes = require("./routes/usuarioRoutes");
+const testesRoutes = require("./routes/testeRoutes");
 
-// =============================
 // MIDDLEWARES
 // =============================
 app.use(cors()); // libera acesso de outros domínios (ex: frontend)
 app.use(express.json()); // permite receber JSON no body
 
-// rota de teste
-app.get("/", (req, res) => {
-  res.send("API rodando 🚀");
-});
-
+app.use(testesRoutes);
 app.use(calcRoutes);
 app.use(usuarioRoutes);
 
