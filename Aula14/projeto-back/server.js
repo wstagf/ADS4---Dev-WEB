@@ -5,8 +5,6 @@ const calcRoutes = require("./routes/calcRoutes");
 const usuarioRoutes = require("./routes/usuarioRoutes");
 const testesRoutes = require("./routes/testeRoutes");
 
-// MIDDLEWARES
-// =============================
 app.use(cors()); // libera acesso de outros domínios (ex: frontend)
 app.use(express.json()); // permite receber JSON no body
 
