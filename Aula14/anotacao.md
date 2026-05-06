@@ -1,0 +1,10 @@
+## Organização do projeto em MVC
+
+# Vamos extrair a lógica de cálculo para um controller separado, para manter o código mais organizado e facilitar a manutenção.
+
+
+* obs: poderiam existir outras pastas, como "models" para lidar com o banco de dados, ou "services" para lidar com integrações externas, "middlewares" para lidar com autenticação, "repositories" para lidar com a persistência de dados, "daos" para lidar com a manipulação de dados, etc. Mas para o nosso exemplo, vamos focar apenas em controllers e routes.
+
+1. Criar as pastas, 
+    - controllers: para colocar a lógica de negócio, ou seja, as funções que realizam os cálculos.
+    - routes: para colocar as rotas, ou seja, os endpoints que a API vai expor.
