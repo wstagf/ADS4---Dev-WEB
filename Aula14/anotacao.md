@@ -33,3 +33,45 @@ module.exports = router;
 
 
 
+
+
+
+- Agora vamos utilizar o banco de dados SQLITE para aramazenar os usuários e suas informações. para isso vamos instalar a biblioteca "sqlite3" e criar um arquivo de configuração para o banco de dados.
+rodando o comando:
+```bash
+npm install sqlite3
+```
+
+
+
+- Para visualizar o banco dados vamos utilizar a aplicacao DBEAVER, que é uma ferramenta de gerenciamento de banco de dados. Ela é gratuita e fácil de usar. Você pode baixar ela no site oficial: https://dbeaver.io/download/
+
+
+- videos de apoio -- https://www.youtube.com/watch?v=LEx96-CkB1Q
+- video mais indicado --- https://www.youtube.com/watch?v=smV1zaqH5SI
+
+
+- primeiro, no dbeaver crie a conexao com o banco de dados utilzando o driver SQLITE, e apontando para o arquivo do banco de dados que você criou no projeto (por exemplo, "database.sqlite"). Depois de criar a conexão, você pode abrir o banco de dados e executar comandos SQL para criar tabelas, inserir dados, etc.
+
+
+
+- utilizamos o script abaixo para criar a tabela de usuários no banco de dados:
+
+```sql
+CREATE TABLE usuarios (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE
+);
+
+```
+
+
+
+- Agora vamos inserir um registro de usuário na tabela "usuarios" para testar a conexão com o banco de dados:
+
+```sql
+INSERT INTO usuarios
+( nome, email)
+VALUES( 'xxx', '6yhh');
+```
