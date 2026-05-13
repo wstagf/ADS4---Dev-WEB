@@ -4,10 +4,12 @@ const app = express();
 const calcRoutes = require("./routes/calcRoutes");
 const usuarioRoutes = require("./routes/usuarioRoutes");
 const testesRoutes = require("./routes/testeRoutes");
+const loginRoutes = require("./routes/loginRoute");
 
 app.use(cors()); // libera acesso de outros domínios (ex: frontend)
 app.use(express.json()); // permite receber JSON no body
 
+app.use(loginRoutes);
 app.use(testesRoutes);
 app.use(calcRoutes);
 app.use(usuarioRoutes);

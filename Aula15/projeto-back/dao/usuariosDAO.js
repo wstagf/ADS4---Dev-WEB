@@ -12,6 +12,8 @@ const listarUsuarios = () => {
     });
 };
 
+
+
 const criarUsuario = (nome, email) => {
     return new Promise((resolve, reject) => {
         db.run(
@@ -60,9 +62,44 @@ const deletarUsuario = (id) => {
     });
 };
 
+
+const criarUsuarioComSenha = (nome, email, usuario, senhaHash) => {
+    return new Promise((resolve, reject) => {
+        db.run(
+            "INSERT INTO usuarios (nome, email, usuario, senha) VALUES (?, ?, ?, ?)",
+            [nome, email, usuario, senhaHash],
+            function(err) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve({ id: this.lastID, nome, email, usuario });
+                }
+            }
+        );
+    });
+};
+
+const buscarPorUsuario = (usuario) => {
+    return new Promise((resolve, reject) => {
+        db.get(
+            "SELECT * FROM usuarios WHERE usuario = ?",
+            [usuario],
+            (err, row) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(row);
+                }
+            }
+        );
+    });
+};
+
 module.exports = {
     listarUsuarios,
     criarUsuario,
     atualizarUsuario,
-    deletarUsuario
+    deletarUsuario,
+    criarUsuarioComSenha,
+    buscarPorUsuario,
 };

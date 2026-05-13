@@ -16,7 +16,9 @@ const db = new sqlite3.Database(dbPath, (err) => {
             CREATE TABLE IF NOT EXISTS usuarios (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome TEXT NOT NULL,
-                email TEXT NOT NULL UNIQUE
+                email TEXT NOT NULL UNIQUE,
+                usuario TEXT NOT NULL UNIQUE,
+                senha TEXT NOT NULL
             )
         `, (err) => {
             if (err) {
