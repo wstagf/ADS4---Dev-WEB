@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const autenticar = require("../middlewares/autenticar");
 
 
 // rota de teste
-router.post("/somar", (req, res) => {
+router.post("/somar", autenticar, (req, res) => {
   x = req.body.x;
   y = req.body.y;
   console.log(`Recebido: x=${x}, y=${y}`);
@@ -13,7 +14,7 @@ router.post("/somar", (req, res) => {
 
 
 // rota de teste
-router.post("/somarQuery", (req, res) => {
+router.post("/somarQuery", autenticar, (req, res) => {
   const x = parseFloat(req.query.x) || 0;
   const y = parseFloat(req.query.y) || 0;
   console.log(`Recebido: x=${x}, y=${y}`);
@@ -23,7 +24,7 @@ router.post("/somarQuery", (req, res) => {
 
 
 // rota de teste
-router.post("/calc/:metodo", (req, res) => {
+router.post("/calc/:metodo", autenticar, (req, res) => {
 
   const x = parseFloat(req.query.x) || 0;
   const y = parseFloat(req.query.y) || 0;

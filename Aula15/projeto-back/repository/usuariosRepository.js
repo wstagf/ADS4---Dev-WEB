@@ -1,6 +1,10 @@
 const usuariosDAO = require("../dao/usuariosDAO");
 
 
+const listar = async () => {
+    return await usuariosDAO.listarUsuarios();
+};
+
 const criar = async (nome, email) => {
     return await usuariosDAO.criarUsuario(nome, email);
 };
@@ -22,6 +26,7 @@ const deletar = async (id) => {
 };
 
 module.exports = {
+    listar,
     criar,
     criarComSenha,
     buscarPorUsuario,
