@@ -15,11 +15,11 @@ const criarUsuario = async (req, res) => {
     try {
         const { nome, email, usuario, senha } = req.body;
         
-        if (!nome || !email) {
-            return res.status(400).json({ error: "Nome e email são obrigatórios" });
+        if (!nome || !email ||  !senha || !usuario ) {
+            return res.status(400).json({ error: " Todos os campos são obrigatórios: nome, usuario, senha e email" });
         }
 
-        // Se fornecer usuário e senha, validar e fazer hash
+        // Se fornecer os dados, validar e fazer hash
         if (usuario && senha) {
             if (senha.length < 3) {
                 return res.status(400).json({ error: "Senha deve ter pelo menos 3 caracteres" });
