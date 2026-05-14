@@ -4,7 +4,18 @@ import type AnimalModel from "../model/animal_model";
 class AnimalService {
     static async carregar( 
     ): Promise<AnimalModel[] | null> {
-            const response = await axios.get('http://localhost:3000/animais', );
+
+            const token = localStorage.getItem('minhaAulaSenai')
+
+            const response =
+                 await axios.get(
+                    'http://localhost:3001/usuarios',
+                {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                }
+                );
             console.log(response.data);
 
             return response.data;
